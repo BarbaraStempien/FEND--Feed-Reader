@@ -53,7 +53,7 @@ $(function() {
      * menu is hidden by default. We hide menu element by applying
      * menu-hidden class to the body element.
      * */
-    it('is hidden by default', function() {
+    it('is hidden by default', () => {
       expect($('body').hasClass('menu-hidden')).toBe(true);
     });
   });
