@@ -68,11 +68,12 @@ $(function() {
     });
   });
 
-  /* TODO: Write a test that ensures the menu changes
-   * visibility when the menu icon is clicked. This test
-   * should have two expectations: does the menu display when
-   * clicked and does it hide when clicked again.
+  /* This is our third test suite - it is all about the
+   * loadFeed function.
    */
+  describe('Initial Entries', () => {
+
+  });
 
   /* TODO: Write a new test suite named "Initial Entries" */
 
