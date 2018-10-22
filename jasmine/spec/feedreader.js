@@ -86,14 +86,23 @@ $(function() {
   });
 
   /* This is our fourth test suite - it is all about the
-   * feed.
+   * new feed.
    */
   describe('New Feed Selection', () => {
+    /* This is our first test - it ensures when a new feed is loaded
+     * by the loadFeed function that the content actually changes.
+     */
+    let previousFeed;
 
+    beforeEach((done) => {
+      loadFeed(0, () => {
+        previousFeed = $('.feed').html();
+        loadFeed(1, done);
+      });
+    });
+
+    it('has been loaded', () => {
+      expect($('.feed').html()).not.toBe(previousFeed);
+    });
   });
-
-  /* TODO: Write a test that ensures when a new feed is loaded
-   * by the loadFeed function that the content actually changes.
-   * Remember, loadFeed() is asynchronous.
-   */
 }());
