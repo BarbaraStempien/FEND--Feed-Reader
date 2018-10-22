@@ -46,7 +46,7 @@ $(function() {
   });
 
   /* This is our second test suite - it is all about the
-  * menu element.
+   * menu element.
    */
   describe('The menu', () => {
     /* This is our first test - it tests to make sure that the
@@ -72,17 +72,18 @@ $(function() {
    * loadFeed function.
    */
   describe('Initial Entries', () => {
-
-  });
-
-  /* TODO: Write a new test suite named "Initial Entries" */
-
-  /* TODO: Write a test that ensures when the loadFeed
+    /* This is our first test - it ensures that when the loadFeed
    * function is called and completes its work, there is at least
    * a single .entry element within the .feed container.
-   * Remember, loadFeed() is asynchronous so this test will require
-   * the use of Jasmine's beforeEach and asynchronous done() function.
    */
+    beforeEach((done) => {
+      loadFeed(0, done);
+    });
+
+    it('exist when the loadFeed function is called', () => {
+      expect($('.feed .entry').length).toBeGreaterThan(0);
+    });
+  });
 
   /* TODO: Write a new test suite named "New Feed Selection" */
 
