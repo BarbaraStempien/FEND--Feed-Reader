@@ -9,8 +9,7 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
-  /* This is our first test suite - a test suite just contains
-   * a related set of tests. This suite is all about the RSS
+  /* This is our first test suite - it is all about the RSS
    * feeds definitions, the allFeeds variable in our application.
    */
   describe('RSS Feeds', () => {
@@ -23,8 +22,7 @@ $(function() {
       expect(allFeeds.length).not.toBe(0);
     });
 
-
-    /* Test loops through each feed
+    /* This is our second test - it loops through each feed
      * in the allFeeds object and ensures it has a URL defined
      * and that the URL is not empty.
      */
@@ -35,7 +33,7 @@ $(function() {
       }
     });
 
-    /* TODO: Write a test that loops through each feed
+    /* This is our third test - it loops through each feed
      * in the allFeeds object and ensures it has a name defined
      * and that the name is not empty.
      */
