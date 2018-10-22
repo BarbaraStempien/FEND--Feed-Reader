@@ -51,7 +51,13 @@ $(function() {
   * menu element.
    */
   describe('The menu', () => {
-
+    /* This is our first test - it tests to make sure that the
+     * menu is hidden by default. We hide menu element by applying
+     * menu-hidden class to the body element.
+     * */
+    it('is hidden by default', function() {
+      expect($('body').hasClass('menu-hidden')).toBe(true);
+    });
   });
 
   /* TODO: Write a test that ensures the menu changes
