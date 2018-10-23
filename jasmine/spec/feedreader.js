@@ -77,11 +77,14 @@ $(function() {
    * a single .entry element within the .feed container.
    */
     beforeEach((done) => {
-      loadFeed(0, done);
+      loadFeed(0, () => {
+        done();
+      });
     });
 
-    it('exist when the loadFeed function is called', () => {
+    it('exist when the loadFeed function is called', (done) => {
       expect($('.feed .entry').length).toBeGreaterThan(0);
+      done();
     });
   });
 
@@ -97,12 +100,15 @@ $(function() {
     beforeEach((done) => {
       loadFeed(0, () => {
         previousFeed = $('.feed').html();
-        loadFeed(1, done);
+        loadFeed(1, () => {
+          done();
+        });
       });
     });
 
-    it('has been loaded', () => {
+    it('has been loaded', (done) => {
       expect($('.feed').html()).not.toBe(previousFeed);
+      done();
     });
   });
 }());
