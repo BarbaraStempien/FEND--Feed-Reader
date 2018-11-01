@@ -14,13 +14,15 @@ This is a test suite for a Feed Reader - web-based application that reads RSS fe
 
 ## Tools & Dependencies
 
-Test have been built with [Jasmine](http://jasmine.github.io/).
-Javascript ES6.
+* Test have been built with [Jasmine](http://jasmine.github.io/).  
+* Javascript ES6.
 
 ## Installation
 
 Clone the repository with Git Bash:  
+  
 `git clone https://github.com/BarbaraStempien/FEND--Feed-Reader.git`  
+  
 and open the `index.html` to run the Feed Reader Tests.
 
 Alternatively, download the repository as a zip file, extract files and open `index.html`.
