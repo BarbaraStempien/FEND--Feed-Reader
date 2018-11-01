@@ -1,6 +1,6 @@
 /* app.js
  *
- * This is our RSS feed reader application. It uses the Google
+ * This is the RSS feed reader application. It uses the Google
  * Feed Reader API to grab RSS feeds as JSON object we can make
  * use of. It also uses the Handlebars templating library and
  * jQuery.
@@ -23,7 +23,7 @@ let allFeeds = [
     }
 ];
 
-/* This function starts up our application. The Google Feed
+/* This function starts up the application. The Google Feed
  * Reader API is loaded asynchonously and will then call this
  * function when the API is loaded.
  */
